@@ -4,7 +4,7 @@
 Projekt za kolegij "Vizualizacija podataka".
 
 
-Link:
+Link: https://durcevicjuraj.me/ygo-cards-data-visualization/index.html
 
 
 @ FERIT
