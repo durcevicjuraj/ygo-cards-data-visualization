@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="hr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Card Popularity | YGO Visualization</title>
+    <link rel="stylesheet" href="../css/popularity.css" />
+    <link rel="stylesheet" href="../css/navbar.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <a href="../index.html" class="nav-item">Home</a>
+      <a href="spider.html" class="nav-item">Spider</a>
+      <a href="#" class="nav-item active">Popularity</a>
+    </nav>
+
+    <div class="container">
+      <h1>Card Popularity</h1>
+
+      <div class="dropdown-container">
+        <select id="metric-select">
+          <option value="upvotes">👍 Upvotes</option>
+          <option value="views">👁️ Views</option>
+          <option value="downvotes">👎 Downvotes</option>
+        </select>
+
+        <div class="legend-icon" title="">
+          ⓘ
+          <div class="legend-tooltip">
+            <strong>Bars:</strong><br />
+            <div>
+              <span class="color-box" style="background: #fde68a"></span>
+              Monster
+            </div>
+            <div>
+              <span class="color-box" style="background: #1d9e74"></span> Spell
+            </div>
+            <div>
+              <span class="color-box" style="background: #bc5a84"></span> Trap
+            </div>
+            <br />
+            <strong>Ban Status:</strong><br />
+            <div><span style="color: #ff0000">Banned</span></div>
+            <div><span style="color: #ff4d4d">Limited</span></div>
+            <div><span style="color: #ff8080">Semi-Limited</span></div>
+            <br />
+            <strong>Is Staple?</strong><br />
+            <div><span>⭐ = Yes</span></div>
+          </div>
+        </div>
+
+      </div>
+
+      <div id="chart"></div>
+    </div>
+    
+
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+
+    <script src="../js/popularity.js"></script>
+    
+    <script src="../js/randomBackgroundImage.js"></script>
+  </body>
+</html>

@@ -1,0 +1,14 @@
+.navbar {
+  background: transparent;
+  padding: 0.75rem 1.5rem;
+  display: flex;
+}
+.nav-item {
+  color: #fff;
+  text-decoration: none;
+  margin-right: 1.5rem;
+}
+.nav-item.active {
+  font-weight: bold;
+  border-bottom: 2px solid #fff;
+}

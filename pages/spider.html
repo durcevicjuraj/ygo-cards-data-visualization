@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="hr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Spider Chart | YGO Visualization</title>
+    <link rel="stylesheet" href="../css/spider.css" />
+    <link rel="stylesheet" href="../css/navbar.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <a href="../index.html" class="nav-item">Home</a>
+      <a href="#" class="nav-item active">Spider</a>
+      <a href="../pages/popularity.html" class="nav-item">Popularity</a>
+    </nav>
+    <h1>Spider Chart Comparison</h1>
+
+    <div class="container">
+      <div class="top-panel">
+        <div class="card-column">
+          <div class="card-slot" id="slot1">Slot 1</div>
+          <div class="card-name" id="name1"></div>
+        </div>
+        <div id="radar-chart"></div>
+        <div class="card-column">
+          <div class="card-slot" id="slot2">Slot 2</div>
+          <div class="card-name" id="name2"></div>
+        </div>
+      </div>
+
+      <div class="filter-panel">
+        <input type="text" id="filter-name" placeholder="Name…" />
+        <label
+          >ATK:
+          <input
+            type="number"
+            id="filter-atk-min"
+            placeholder="Min"
+            style="width: 60px"
+          />
+          &ndash;
+          <input
+            type="number"
+            id="filter-atk-max"
+            placeholder="Max"
+            style="width: 60px"
+          />
+        </label>
+        <label
+          >DEF:
+          <input
+            type="number"
+            id="filter-def-min"
+            placeholder="Min"
+            style="width: 60px"
+          />
+          &ndash;
+          <input
+            type="number"
+            id="filter-def-max"
+            placeholder="Max"
+            style="width: 60px"
+          />
+        </label>
+        <select id="filter-type">
+          <option value="">All Types</option>
+        </select>
+        <select id="filter-race">
+          <option value="">All Races</option>
+        </select>
+        <select id="filter-attribute">
+          <option value="">All Attributes</option>
+        </select>
+        <select id="filter-archetype">
+          <option value="">All Archetypes</option>
+        </select>
+        <label
+          ><input type="checkbox" id="filter-has-effect" /> Has Effect</label
+        >
+        <label><input type="checkbox" id="filter-staple" /> Staple</label>
+        <label
+          >Level/Rank:
+          <input
+            type="number"
+            id="filter-level-min"
+            placeholder="Min"
+            style="width: 60px"
+          />
+          &ndash;
+          <input
+            type="number"
+            id="filter-level-max"
+            placeholder="Max"
+            style="width: 60px"
+          />
+        </label>
+        <button id="reset-filters" style="margin-left: 10px">
+          ✖ Reset Filters
+        </button>
+      </div>
+
+      <div id="pagination">
+        <button id="prev-page">‹ Previous</button>
+        <span id="page-info">Page 1</span>
+        <button id="next-page">Next ›</button>
+      </div>
+
+      <div id="gallery"></div>
+    </div>
+
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+   
+    <script src="../js/spider.js" defer></script>
+
+    <script src="../js/randomBackgroundImage.js"></script>
+  </body>
+</html>
